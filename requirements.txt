@@ -1,0 +1,8 @@
+kagglehub==1.0.1
+pandas==3.0.2
+polar==1.40.1
+bayesian_optimization==3.2.1
+scikit-learn
+seaborn
+matplotlib
+numpy
