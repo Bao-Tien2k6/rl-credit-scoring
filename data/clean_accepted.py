@@ -6,7 +6,8 @@ OUTPUT_PARQUET = "./processed_data/processed_accepted_df.parquet"
 OUTPUT_CSV = "./processed_data/processed_accepted_df.csv"
 
 FEATURES_FINAL = [
-    'loan_amnt', 'term', 'int_rate',
+    'loan_amnt', 'term', 'int_rate', 'total_pymnt',
+    'funded_amnt', 'funded_amnt_inv',
     'grade', 'sub_grade', 'purpose',
     'annual_inc', 'dti', 'delinq_2yrs', 'inq_last_6mths',
     'open_acc', 'total_acc', 'pub_rec', 'revol_bal', 'revol_util',
