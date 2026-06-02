@@ -24,13 +24,13 @@ print(f"Downloaded to: {path}")
 # 3. find csv file
 accepted_source = os.path.join(
     path,
-    "accepted_2007_to_2018q4",
+    "accepted_2007_to_2018Q4.csv",
     "accepted_2007_to_2018Q4.csv"
 )
 
 rejected_source = os.path.join(
     path,
-    "rejected_2007_to_2018q4",
+    "rejected_2007_to_2018Q4.csv",
     "rejected_2007_to_2018Q4.csv"
 )
 
