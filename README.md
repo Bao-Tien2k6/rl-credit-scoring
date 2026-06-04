@@ -52,22 +52,20 @@ RL-CREDIT-SCORING/
 pip install -r requirements.txt
 ```
 
-### 2. Set up Kaggle credentials
-
-Download your `kaggle.json` API token from [kaggle.com/settings](https://www.kaggle.com/settings) and place it at:
-
-```
-~/.kaggle/kaggle.json      # macOS / Linux
-%USERPROFILE%\.kaggle\kaggle.json   # Windows
-```
-
-### 3. Download the data
+### 2. Download the data
 
 ```bash
 python load_data.py
 ```
 
 This creates `data/raw_data/` and downloads the LendingClub dataset from Kaggle into it.
+
+### 3. Clean data
+```bash
+cd data
+python clean_accepted.py
+```
+Output:
 
 ### 4. Clean and preprocess
 
