@@ -1,9 +1,22 @@
 kagglehub==1.0.1
+protobuf>=5.29,<6.0
 pandas==3.0.2
-polars==1.40.1
-pyarrow==24.0.0
-bayesian_optimization==3.2.1
+numpy==2.0.2
 scikit-learn
 seaborn
 matplotlib
-numpy
+polars==1.40.1
+pyarrow==24.0.0
+bayesian_optimization==3.2.1
+optuna==4.9.0
+optuna_integration==4.9.0
+category_encoders==2.9.0
+category_encoders==2.9.0
+torch
+lightgbm
+xgboost>=2.0
+
+--extra-index-url https://pypi.nvidia.com
+cuml-cu12
+xgboost>=2.0
+cudf-cu12
