@@ -73,8 +73,8 @@ FEATURES_FINAL = [
     'annual_inc', 'emp_length', 'home_ownership', 'dti',
     # 3. Credit History & Utilization (The Track Record)
     'fico_range_low', 'earliest_cr_line', 'open_acc', 'total_acc',
-    'mort_acc', 'tot_cur_bal', 'revol_bal', 'revol_util',
-    'bc_util', 'percent_bc_gt_75', 'inq_last_6mths',
+    'mort_acc', 'tot_cur_bal', 'revol_bal', 'bc_util', 
+    'percent_bc_gt_75', 'inq_last_6mths',
     # 4. Red Flags
     'delinq_2yrs', 'acc_now_delinq', 'tax_liens', 'pub_rec',
     # 5. Metadata & Target Variables
@@ -183,7 +183,6 @@ def main():
         pl.col("mort_acc").fill_null(pl.col("mort_acc").median()),
         pl.col("dti").fill_null(pl.col("dti").median()),
         pl.col("bc_util").fill_null(pl.col("bc_util").median()),
-        pl.col("revol_util").fill_null(pl.col("revol_util").median()),
         pl.col("tot_cur_bal").fill_null(pl.col("tot_cur_bal").median()),
         pl.col("pub_rec").fill_null(0),
         pl.col("inq_last_6mths").fill_null(0),
@@ -207,7 +206,6 @@ def main():
     clean_df = clean_df.with_columns([
         (pl.col("inq_last_6mths") / (pl.col("total_acc") + 1))
             .alias("inquiries_per_account"),
-        (pl.col("revol_util") * pl.col("dti")).alias("revol_stress"),
         (pl.col("open_acc") / (pl.col("total_acc") + 1)).alias("active_accounts_ratio")
     ])
 
