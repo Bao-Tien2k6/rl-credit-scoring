@@ -67,16 +67,10 @@ python clean_accepted.py
 ```
 Output:
 
-### 4. Clean and preprocess
+### 4. Extract data for ML
+Run notebook/raw_data/feat_for_ML.ipynb, then make directory and write their outputs to `data/ml_data/`.
 
-Run the two cleaning notebooks in order. Both write their outputs to `data/processed_data/`.
-
-```
-clean_accepted.ipynb   →  data/processed_data/accepted_cleaned.csv
-clean_rejected.ipynb   →  data/processed_data/rejected_cleaned.csv
-```
-
-The cleaning steps include: dropping features with >20% null values, removing correlated redundant features (Pearson r > 0.70), encoding categoricals, and engineering eight derived features (e.g. `loan_to_income`, `monthly_debt_burden`, `poor_fico_flag`).
+The cleaning steps include: dropping features with >10% null values, removing correlated redundant features (Pearson r > 0.70), encoding categoricals, and engineering eight derived features (e.g. `loan_to_income`, `monthly_debt_burden`, `poor_fico_flag`).
 
 ### 5. Explore (optional)
 
