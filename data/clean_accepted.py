@@ -69,6 +69,7 @@ OUTPUT_CSV = "./processed_data/processed_accepted_df.csv"
 FEATURES_FINAL = [
     # 1. Loan Characteristics (The Application)
     'loan_amnt', 'term', 'int_rate', 'grade', 'sub_grade', 'purpose',
+    "funded_amnt", "funded_amnt_inv", "total_pymnt",
     # 2. Borrower Demographics & Financials (The Person)
     'annual_inc', 'emp_length', 'home_ownership', 'dti',
     # 3. Credit History & Utilization (The Track Record)
@@ -76,7 +77,7 @@ FEATURES_FINAL = [
     'mort_acc', 'tot_cur_bal', 'revol_bal', 'bc_util', 
     'percent_bc_gt_75', 'inq_last_6mths',
     # 4. Red Flags
-    'delinq_2yrs', 'acc_now_delinq', 'tax_liens', 'pub_rec',
+    'delinq_2yrs', 'acc_now_delinq', 'tax_liens', 'pub_rec', 'verification_status',
     # 5. Metadata & Target Variables
     'issue_d', 'loan_status'
 ]
