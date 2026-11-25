@@ -4,6 +4,8 @@ Reinforcement learning applied to loan approval and interest rate pricing, frame
 
 Built on the [LendingClub Loan Dataset](https://www.kaggle.com/datasets/wordsforthewise/lending-club) (~2.26M loan records, 2007–2018).
 
+## Summary
+A two-track credit-risk project on the LendingClub loan data (2007–2018). Track 1 benchmarks four calibrated default classifiers (Logistic Regression, Random Forest, XGBoost, CatBoost) on a strict temporal split, using PR-AUC-driven Optuna tuning, target-aware encoders and isotonic calibration on a held-out validation set. Track 2 treats lending as a sequential decision problem: an agent chooses to reject a loan or approve it at one of three rate tiers while the portfolio's non-performing-loan (NPL) ratio is tracked. We first proposed a constrained DQN, but its value estimates were unstable under sparse, high-variance rewards and could not guarantee a hard risk budget. We replaced it with an XGBoost policy that uses a reject region (p_default > 0.20, FICO < 700) to hold test NPL at 4.01%, against 12.35% for a greedy bandit baseline and 22.42% for the unconstrained ablation.
 ---
 
 ## Methods
